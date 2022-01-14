@@ -8,6 +8,7 @@ from windows.cargo_edit_window import Cargo_Dialog
 from windows.customer_edit_window import Customer_Dialog
 from windows.main_window import Ui_Form
 from windows.order_edit_window import Order_Dialog
+from windows.route_edit_window import Route_Dialog
 
 
 class AirplaneEditWindow(QDialog):
@@ -107,7 +108,7 @@ class OrderEditWindow(QDialog):
 class RouteEditWindow(QDialog):
   def __init__(self, parent, entity = Route()) -> None:
     super().__init__(parent)
-    self.ui = Order_Dialog()
+    self.ui = Route_Dialog()
     self.ui.setupUi(self)
     self.entity = entity
     self.initData()

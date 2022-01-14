@@ -230,7 +230,7 @@ class MainWindow(QMainWindow):
 
     def changeAirplane(self):
       for entity in Airplane.select():
-        print(str(entity.id) + ' | ' + entity.name + ' | ' + entity.capacity + ' | ' + entity.fightRange )
+        print(str(entity.id) + ' | ' + entity.name + ' | ' + entity.capacity + ' | ' + entity.flightRange )
       id = self.showDialog()
       airplane = Airplane.get(Airplane.id == id)
       AirplaneEditWindow(self, airplane).show()

@@ -9,14 +9,15 @@
 ################################################################################
 
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
+                            QMetaObject, QObject, QPoint, QRect, QSize, Qt,
+                            QTime, QUrl)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
+                           QFontDatabase, QGradient, QIcon, QImage,
+                           QKeySequence, QLinearGradient, QPainter, QPalette,
+                           QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QPushButton,
-    QSizePolicy, QWidget)
+                               QSizePolicy, QWidget)
+
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -205,4 +206,3 @@ class Ui_Form(object):
         self.btn_order_del.setText(QCoreApplication.translate("Form", u"\u0423\u0434\u0430\u043b\u0438\u0442\u044c", None))
         self.label_5.setText(QCoreApplication.translate("Form", u"\u0417\u0430\u043a\u0430\u0437", None))
     # retranslateUi
-

@@ -3,8 +3,9 @@ import sys
 from PySide6.QtWidgets import QApplication, QDialog, QInputDialog, QMainWindow
 
 from models import Airplane, Cargo, Customer, Order, Route
-from windows.airplane_edit_window import Customer_Dialog
+from windows.airplane_edit_window import Airplane_Dialog
 from windows.cargo_edit_window import Cargo_Dialog
+from windows.customer_edit_window import Customer_Dialog
 from windows.main_window import Ui_Form
 from windows.order_edit_window import Order_Dialog
 
@@ -12,7 +13,7 @@ from windows.order_edit_window import Order_Dialog
 class AirplaneEditWindow(QDialog):
   def __init__(self, parent, airplane = Airplane()) -> None:
       super().__init__(parent)
-      self.ui = Customer_Dialog()
+      self.ui = Airplane_Dialog()
       self.ui.setupUi(self)
       self.airplane = airplane
       self.initData()
@@ -139,6 +140,7 @@ class MainWindow(QMainWindow):
       super(MainWindow, self).__init__()
       self.ui = Ui_Form()
       self.ui.setupUi(self)
+      self.setWindowTitle('Airplane transportation');
       self.ui.btn_airplane_add.clicked.connect(self.addAirpalne)
       self.ui.btn_airplane_change.clicked.connect(self.changeAirplane)
       self.ui.btn_airplane_del.clicked.connect(self.deleteAirplane)

@@ -20,7 +20,7 @@ from PySide6.QtWidgets import (QAbstractButton, QApplication, QDialog,
                                QLineEdit, QSizePolicy, QVBoxLayout, QWidget)
 
 
-class Customer_Dialog(object):
+class Airplane_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")

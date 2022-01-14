@@ -9,17 +9,18 @@
 ################################################################################
 
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QAbstractButton, QApplication, QDialog, QDialogButtonBox,
-    QHBoxLayout, QLabel, QLineEdit, QSizePolicy,
-    QVBoxLayout, QWidget)
+                            QMetaObject, QObject, QPoint, QRect, QSize, Qt,
+                            QTime, QUrl)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
+                           QFontDatabase, QGradient, QIcon, QImage,
+                           QKeySequence, QLinearGradient, QPainter, QPalette,
+                           QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QAbstractButton, QApplication, QDialog,
+                               QDialogButtonBox, QHBoxLayout, QLabel,
+                               QLineEdit, QSizePolicy, QVBoxLayout, QWidget)
 
-class Ui_Dialog(object):
+
+class Customer_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
@@ -124,4 +125,3 @@ class Ui_Dialog(object):
         self.label_5.setText(QCoreApplication.translate("Dialog", u"\u0410\u0434\u0440\u0435\u0441", None))
         self.label_6.setText(QCoreApplication.translate("Dialog", u"\u0422\u0435\u043b\u0435\u0444\u043e\u043d", None))
     # retranslateUi
-

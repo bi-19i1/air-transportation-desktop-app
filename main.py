@@ -164,8 +164,33 @@ class MainWindow(QMainWindow):
       self.ui.btn_order_del_2.clicked.connect(self.showOrderTable)
 
   def showOrderTable(self):
-    table = TableWindow(self)
-    table.show()
+    print(
+        'ID'
+        + ' | '
+        + 'CUSTOMER ID'
+        + ' | '
+        + 'AIRPLANE ID'
+        + ' | '
+        + 'ROUTE ID'
+        + ' | '
+        + 'CARGO ID'
+        + ' | '
+        + 'STATUS'
+    )
+    for entity in Order.select():
+          print(
+              str(entity.id)
+              + " | "
+              + entity.customer
+              + " | "
+              + entity.airplane
+              + " | "
+              + entity.route
+              + " | "
+              + entity.cargo
+              + " | "
+              + entity.status
+          )
 
   def deleteRoute(self):
       id = self.showDialog()

@@ -9,15 +9,14 @@
 ################################################################################
 
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-                            QMetaObject, QObject, QPoint, QRect, QSize, Qt,
-                            QTime, QUrl)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
-                           QFontDatabase, QGradient, QIcon, QImage,
-                           QKeySequence, QLinearGradient, QPainter, QPalette,
-                           QPixmap, QRadialGradient, QTransform)
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QPushButton,
-                               QSizePolicy, QWidget)
-
+    QSizePolicy, QWidget)
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -27,14 +26,12 @@ class Ui_Form(object):
         Form.setMinimumSize(QSize(530, 495))
         Form.setMaximumSize(QSize(530, 495))
         font = QFont()
-        font.setFamilies([u"Arial"])
         Form.setFont(font)
         Form.setStyleSheet(u"")
         self.label = QLabel(Form)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(10, 20, 250, 20))
         font1 = QFont()
-        font1.setFamilies([u"Arial"])
         font1.setPointSize(18)
         self.label.setFont(font1)
         self.label.setScaledContents(True)
@@ -43,7 +40,6 @@ class Ui_Form(object):
         self.btn_airplane_add.setObjectName(u"btn_airplane_add")
         self.btn_airplane_add.setGeometry(QRect(10, 48, 250, 41))
         font2 = QFont()
-        font2.setFamilies([u"Arial"])
         font2.setPointSize(14)
         self.btn_airplane_add.setFont(font2)
         self.btn_airplane_add.setAutoExclusive(False)
@@ -139,9 +135,8 @@ class Ui_Form(object):
         self.line.setFrameShadow(QFrame.Sunken)
         self.btn_order_add = QPushButton(Form)
         self.btn_order_add.setObjectName(u"btn_order_add")
-        self.btn_order_add.setGeometry(QRect(10, 400, 511, 41))
+        self.btn_order_add.setGeometry(QRect(10, 400, 374, 41))
         font3 = QFont()
-        font3.setFamilies([u"Arial"])
         font3.setPointSize(14)
         font3.setBold(True)
         self.btn_order_add.setFont(font3)
@@ -161,22 +156,25 @@ class Ui_Form(object):
         self.btn_order_del = QPushButton(Form)
         self.btn_order_del.setObjectName(u"btn_order_del")
         self.btn_order_del.setGeometry(QRect(270, 444, 251, 41))
-        font5 = QFont()
-        font5.setFamilies([u"Arial"])
-        font5.setPointSize(14)
-        font5.setBold(False)
-        self.btn_order_del.setFont(font5)
+        self.btn_order_del.setFont(font4)
         self.btn_order_del.setStyleSheet(u"")
         self.btn_order_del.setAutoExclusive(False)
         self.btn_order_del.setFlat(False)
         self.label_5 = QLabel(Form)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setGeometry(QRect(10, 365, 511, 20))
-        font6 = QFont()
-        font6.setPointSize(20)
-        self.label_5.setFont(font6)
+        font5 = QFont()
+        font5.setPointSize(20)
+        self.label_5.setFont(font5)
         self.label_5.setScaledContents(True)
         self.label_5.setAlignment(Qt.AlignCenter)
+        self.btn_order_del_2 = QPushButton(Form)
+        self.btn_order_del_2.setObjectName(u"btn_order_del_2")
+        self.btn_order_del_2.setGeometry(QRect(390, 395, 131, 50))
+        self.btn_order_del_2.setFont(font4)
+        self.btn_order_del_2.setStyleSheet(u"")
+        self.btn_order_del_2.setAutoExclusive(False)
+        self.btn_order_del_2.setFlat(False)
 
         self.retranslateUi(Form)
 
@@ -205,4 +203,6 @@ class Ui_Form(object):
         self.btn_order_change.setText(QCoreApplication.translate("Form", u"\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c", None))
         self.btn_order_del.setText(QCoreApplication.translate("Form", u"\u0423\u0434\u0430\u043b\u0438\u0442\u044c", None))
         self.label_5.setText(QCoreApplication.translate("Form", u"\u0417\u0430\u043a\u0430\u0437", None))
+        self.btn_order_del_2.setText(QCoreApplication.translate("Form", u"\u0421\u043f\u0438\u0441\u043e\u043a", None))
     # retranslateUi
+

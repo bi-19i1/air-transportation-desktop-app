@@ -23,9 +23,7 @@
    </size>
   </property>
   <property name="font">
-   <font>
-    <family>Arial</family>
-   </font>
+   <font/>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -44,7 +42,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>18</pointsize>
     </font>
    </property>
@@ -69,7 +66,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>14</pointsize>
     </font>
    </property>
@@ -94,7 +90,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>14</pointsize>
     </font>
    </property>
@@ -119,7 +114,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>14</pointsize>
     </font>
    </property>
@@ -144,7 +138,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>18</pointsize>
     </font>
    </property>
@@ -169,7 +162,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>14</pointsize>
     </font>
    </property>
@@ -194,7 +186,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>14</pointsize>
     </font>
    </property>
@@ -219,7 +210,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>14</pointsize>
     </font>
    </property>
@@ -244,7 +234,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>14</pointsize>
     </font>
    </property>
@@ -269,7 +258,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>18</pointsize>
     </font>
    </property>
@@ -294,7 +282,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>14</pointsize>
     </font>
    </property>
@@ -319,7 +306,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>14</pointsize>
     </font>
    </property>
@@ -344,7 +330,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>14</pointsize>
     </font>
    </property>
@@ -369,7 +354,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>14</pointsize>
     </font>
    </property>
@@ -394,7 +378,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>14</pointsize>
     </font>
    </property>
@@ -419,7 +402,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>18</pointsize>
     </font>
    </property>
@@ -451,13 +433,12 @@
     <rect>
      <x>10</x>
      <y>400</y>
-     <width>511</width>
+     <width>374</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>14</pointsize>
      <bold>true</bold>
     </font>
@@ -514,7 +495,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
      <pointsize>14</pointsize>
      <bold>false</bold>
     </font>
@@ -554,6 +534,34 @@
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_order_del_2">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>395</y>
+     <width>131</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>Список</string>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
    </property>
   </widget>
  </widget>

@@ -1,6 +1,7 @@
 import sys
 
-from PySide6.QtWidgets import QApplication, QDialog, QInputDialog, QMainWindow
+from PySide6.QtWidgets import (QApplication, QBoxLayout, QDialog, QInputDialog,
+                               QMainWindow, QTableWidget, QTableWidgetItem)
 
 from models import Airplane, Cargo, Customer, Order, Route
 from windows.airplane_edit_window import Airplane_Dialog
@@ -126,6 +127,13 @@ class RouteEditWindow(QDialog):
 
       self.entity.save()
 
+class TableWindow(QDialog):
+  def __init__(self, parent) -> None:
+      super().__init__(parent)
+      self.layout = QBoxLayout()
+      self.layout.addWidget(TableView())
+      self.setLayout(self.layout)
+
 
 class MainWindow(QMainWindow):
   def __init__(self):
@@ -152,6 +160,12 @@ class MainWindow(QMainWindow):
       self.ui.btn_route_add.clicked.connect(self.addRoute)
       self.ui.btn_route_change.clicked.connect(self.changeRoute)
       self.ui.btn_route_del.clicked.connect(self.deleteRoute)
+
+      self.ui.btn_order_del_2.clicked.connect(self.showOrderTable)
+
+  def showOrderTable(self):
+    table = TableWindow(self)
+    table.show()
 
   def deleteRoute(self):
       id = self.showDialog()
@@ -274,10 +288,62 @@ class MainWindow(QMainWindow):
           return text
 
 
-if __name__ == "__main__":
-  app = QApplication(sys.argv)
+def getOrders():
+    ids = []
+    customers = []
+    airpalens = []
+    routes = []
+    cargos = []
+    statuses = []
 
-  window = MainWindow()
-  window.show()
+    for order in Order.select():
+      ids.append(str(order.id))
+      customers.append(order.customer)
+      airpalens.append(order.airplane)
+      routes.append(order.route)
+      cargos.append(order.cargo)
+      statuses.append(order.status)
 
-  sys.exit(app.exec())
+    return {
+      'ID': ids,
+      'Заказчик (ID)': customers,
+      'Воздушное судно (ID)': airpalens,
+      'Маршрут (ID)': routes,
+      'Груз (ID)': cargos,
+      'Статус': statuses
+    }
+
+# data = {'col1':['1','2','3','4'],
+#         'col2':['1','2','1','3'],
+#         'col3':['1','1','2','1']}
+
+class TableView(QTableWidget):
+    def __init__(self):
+        self.data = getOrders()
+        rowsCount = len(self.data['ID'])
+        QTableWidget.__init__(self, rowsCount, 6)
+        self.setData()
+        self.resizeColumnsToContents()
+        self.resizeRowsToContents()
+
+
+    def setData(self):
+        horHeaders = []
+        for n, key in enumerate(sorted(self.data.keys())):
+            horHeaders.append(key)
+            for m, item in enumerate(self.data[key]):
+                newitem = QTableWidgetItem(item)
+                self.setItem(m, n, newitem)
+        self.setHorizontalHeaderLabels(horHeaders)
+
+# --------------------------------------------------------------
+
+app = QApplication(sys.argv)
+
+window = MainWindow()
+window.show()
+
+table = TableView()
+table.show()
+
+sys.exit(app.exec())

@@ -368,7 +368,4 @@ app = QApplication(sys.argv)
 window = MainWindow()
 window.show()
 
-table = TableView()
-table.show()
-
 sys.exit(app.exec())
